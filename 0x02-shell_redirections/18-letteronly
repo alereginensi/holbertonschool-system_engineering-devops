@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -E ^"[A-Z]" /etc/passwd/sshd_config
+grep -E ^. /etc/passwd/sshd_config
