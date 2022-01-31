@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -E ^[alpha] /etc/passwd/sshd_config
+grep '^[[:alpha:]]' /etc/passwd/sshd_config
