@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%..10d\n" 123 
+printf "%..2d\n" 123 
