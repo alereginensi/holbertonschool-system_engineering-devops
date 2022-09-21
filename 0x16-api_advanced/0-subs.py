@@ -8,8 +8,7 @@ import sys
 def number_of_subscribers(subreddit):
     '''queries the Reddit API'''
     try:
-        reddit = sys.argv[1]
-        url = 'http://reddit.com/r/{}/about.json'.format(reddit)
+        url = 'http://reddit.com/r/{}/about.json'.format(subreddit)
         headers = {
             'User-Agent': 'My User Agent 1.0'
         }
@@ -17,5 +16,5 @@ def number_of_subscribers(subreddit):
         response = requests.get(url, headers=headers).json()
         subs = response['data']['subscribers']
         return subs
-    except Exception as error:
+    except Exception:
         return 0
