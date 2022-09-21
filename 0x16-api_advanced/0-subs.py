@@ -2,6 +2,7 @@
 '''queries the Reddit API and returns the number of subscribers for a given subreddit.'''
 '''If an invalid subreddit is given, the function should return 0.'''
 
+import requests
 import sys
 
 def number_of_subscribers(subreddit):
@@ -16,5 +17,5 @@ def number_of_subscribers(subreddit):
         response = requests.get(url, headers=headers).json()
         subs = response['data']['subscribers']
         return subs
-    except(Exception) as error:
+    except Exception as error:
         return 0
